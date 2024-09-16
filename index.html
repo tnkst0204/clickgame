@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2/dist/vue.global.js"></script> -->
+</head>
+<body>
+      <div class="header">
+        <h1><a href="https://www.youtube.com/" style="text-decoration: none;color: black;">いろいろ</a></h1>
+      </div>
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+      </label>
+      <div id="sidebarMenu">
+        <ul class="sidebarMenuInner" style="user-select: none">
+          <li id="setting-toggle">settings</li>
+        </ul>
+      </div>
+      <div id="toggle-item-settingMenu" class="setting">
+        <div id="column" style="user-select: none">
+          <span class="colorSetSpan">▼背景色</span><br>
+          <input type="radio" class="colorRadio" id="colorDefault" name="colorSet" value="1"><span class="colorSetSpan">標準</span><br>
+          <input type="radio" class="colorRadio" id="colorRed" name="colorSet" value="2"><span class="colorSetSpan">赤</span><br>
+          <input type="radio" class="colorRadio" id="colorBlue" name="colorSet" value="3"><span class="colorSetSpan">青</span><br>
+          <input type="radio" class="colorRadio" id="colorBlack" name="colorSet" value="4"><span class="colorSetSpan">黒</span><br>
+          <input type="radio" class="colorRadio" id="colorGreen" name="colorSet" value="5"><span class="colorSetSpan">緑</span><br>
+        </div>
+        <div id="column" style="user-select: none">
+          <span class="colorSetSpan">▼文字サイズ</span><br>
+          <input type="range" id="fontsizesrider" min="1" max="10" step="1" value="5"><br>
+        </div>
+        <div id="column" style="user-select: none">
+          <span class="colorSetSpan">▼CPS表示</span>
+          <div id="CPSview" style="font-size: 20px;user-select: none;">CPS:0</div><br>
+          <input type="range" id="cpsViewerSize" min="1" max="10" step="1" value="5"><br>
+        </div>
+      </div>
+      <div class="mainInner" id="maininner" style="user-select: none">
+        <h1 id="clickvalueview">0</h1>
+        <button id="valueplus" onclick="clickButton();">click</button>
+      </div>
+      <script src="script.js"></script>
+      <script src="CPSview.js"></script>
+</body>
+</html>
